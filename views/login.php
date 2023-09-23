@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="libs/css/styles.css">
+    <link rel="stylesheet" href="../libs/css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../controllers/js/login.js"></script>
+
     <title>Tela de Login</title>
 </head>
 
 <body>
     <div class="main">
-        <h2>Login</h2>
+        <h2 class="neon">Login</h2>
         <div class="login-container">
-            <form action="processar_login.php" method="POST">
+            <form name="form-login" autocomplete="off" id="form-login" method="POST" action="#">
                 <label for="username">Usuário:</label>
                 <input type="text" id="username" name="username" required>
                 <label for="password">Senha:</label>
@@ -21,8 +25,7 @@
             </form>
         </div>
     </div>
-
-    <script src="libs/js/scripts.js"></script>
+    <script src="../libs/js/scripts.js"></script>
 </body>
 
 </html>
