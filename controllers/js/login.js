@@ -1,22 +1,34 @@
 $(document).ready(function () {
-    jQuery("#form-login").submit(function () {
+    jQuery("#loginForm").submit(function () {
         event.preventDefault();
 
-        alert("entrou aqui");
+        var username = $("#username").val();
+        var password = $("#password").val();
 
-        
-        // Aguardar(1, "<?php echo $idAba; ?>_all", "divExecucaoCadastro_" + idAba);
-        // $.ajax({
-        //     url: "programas/MAN_IND_630_Campo_Dados.php",
-        //     cache: false,
-        //     data: dados,
-        //     type: "POST",
-        //     success: function (msg) {
-        //         $("#gridCarregar_" + idAba).empty();
-        //         $("#gridCarregar_" + idAba).html(msg);
+        var dados = {
+            user: username,
+            pass: password,
+        };
 
-        //         Aguardar(0, "<?php echo $idAba; ?>_all");
-        //     },
-        // });
+        var jsonData = JSON.stringify(dados);
+
+        // console.log(jsonData);
+
+        $.ajax({
+            url: "../model/login_verify.php",
+            cache: false,
+            data: jsonData,
+            type: "POST",
+            success: function (msg) {
+                if (msg == "true" || msg == true) {
+                    window.location.href = "menu.php";
+                } else {
+                    alert("Usuário ou senha inválidos");
+                }
+            },
+            error: function (error) {
+                console.log("Erro na requisição: " + JSON.stringify(error));
+            },
+        });
     });
 });

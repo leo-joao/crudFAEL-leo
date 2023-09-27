@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -15,7 +16,7 @@
     <div class="main">
         <h2 class="neon">Login</h2>
         <div class="login-container">
-            <form name="form-login" autocomplete="off" id="form-login" method="POST" action="#">
+            <form name="loginForm" autocomplete="off" id="loginForm" method="POST" action="#">
                 <label for="username">Usuário:</label>
                 <input type="text" id="username" name="username" required>
                 <label for="password">Senha:</label>
