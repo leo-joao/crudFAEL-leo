@@ -4,19 +4,19 @@ require 'menu.php';
 
 ?>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="../controllers/js/save_estab.js"></script>
+<script src="../controllers/js/save_product.js"></script>
 
 <link rel="stylesheet" href="../libs/css/styles-main.css">
 
 <div class="register_main">
-    <p class="register_label">Nome do Estabelecimento</p>
-    <input type="text" id="estab_name" class="register_field" name="estab_name">
-    <p class="register_label">Endereço</p>
-    <input type="text" id="estab_address" class="register_field" name="estab_address">
-    <p class="register_label">Cidade</p>
-    <input type="text" id="estab_city" class="register_field" name="estab_city">
-    <p class="register_label">Número de Filiais</p>
-    <input type="number" min="1" max="999" id="estab_amount" class="register_field" name="estab_amount" value="1">
+    <p class="register_label">Nome do Produto</p>
+    <input type="text" id="prod_name" class="register_field" name="prod_name">
+    <p class="register_label">Marca</p>
+    <input type="text" id="prod_brand" class="register_field" name="prod_brand">
+    <p class="register_label">Quantidade / Tamanho</p>
+    <input type="number" min="1" max="999" id="prod_amount" class="register_field" name="prod_amount">
+    <p class="register_label">Unidade de Medida</p>
+    <input type="text" id="prod_unit" class="register_field" name="prod_unit">
     <br>
     <br>
     <br>

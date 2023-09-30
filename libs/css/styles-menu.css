@@ -25,6 +25,7 @@ h1 {
     background: #fff;
     overflow: hidden;
     transition: 0.5s;
+    z-index: 99999;
 }
 
 .sidebar:hover{

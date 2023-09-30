@@ -1,4 +1,9 @@
-.register_main {
+h1 {
+    background-color: rgba(0, 0, 0, 0.308);
+    text-shadow: 3px 3px 3px rgb(47, 73, 8);
+}
+
+.register_main, .list_main {
     width: 70%;
     height: 80%;
     border: 4px;
@@ -49,3 +54,4 @@
     color:  rgb(202, 52, 6);
     background-color: rgb(199, 197, 82);
 }
+

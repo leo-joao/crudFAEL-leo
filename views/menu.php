@@ -34,13 +34,13 @@ session_start();
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="register_prod.php">
                     <span class="icon"><ion-icon name="shirt"></ion-icon></span>
                     <span class="text">Cadastro de Produto</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="register_price.php">
                     <span class="icon"><ion-icon name="logo-usd"></ion-icon></span>
                     <span class="text">Cadastro de Preços</span>
                 </a>
@@ -52,7 +52,7 @@ session_start();
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="list_products.php">
                     <span class="icon"><ion-icon name="list-box"></ion-icon></span>
                     <span class="text">Consulta de Produtos</span>
                 </a>

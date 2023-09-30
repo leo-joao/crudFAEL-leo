@@ -1,0 +1,24 @@
+<?php
+require 'connection.php';
+
+function GerarSelectMarcas($connection)
+{
+
+    $query = $connection->prepare("SELECT DISTINCT product_brand FROM products");
+
+    $query->execute();
+
+    $result = $query->fetchAll();
+
+    $htmlSelect = "<select id='select_brand' name='select_brand' style='padding: 3px; width: 100%; height: 40px; font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;'>
+    <option selected disabled>Selecione</option>";
+
+    $htmlOptions = '';
+    foreach ($result as $index) {
+        $brand = $index['product_brand'];
+
+        $htmlOptions .= "<option value='$brand'>$brand</option>";
+    }
+
+    return $htmlSelect . $htmlOptions . "</select>";
+}
