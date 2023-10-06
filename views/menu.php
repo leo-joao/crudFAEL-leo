@@ -46,7 +46,7 @@ session_start();
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="list_stores.php">
                     <span class="icon"><ion-icon name="business"></ion-icon></span>
                     <span class="text">Consulta de Estabelecimentos</span>
                 </a>
@@ -58,7 +58,7 @@ session_start();
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="list_prices.php">
                     <span class="icon"><ion-icon name="podium"></ion-icon></span>
                     <span class="text">Consulta de Preços</span>
                 </a>

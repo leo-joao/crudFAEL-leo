@@ -12,8 +12,6 @@ $(document).ready(function () {
 
         var jsonData = JSON.stringify(dados);
 
-        // console.log(jsonData);
-
         $.ajax({
             url: "../model/login_verify.php",
             cache: false,

@@ -30,8 +30,6 @@ $(document).ready(function () {
             data: jsonData,
             type: "POST",
             success: function (msg) {
-                console.log("aqui");
-                console.log(msg);
                 if (msg == "true" || msg == true) {
                     $("#info_msg").toggle();
 

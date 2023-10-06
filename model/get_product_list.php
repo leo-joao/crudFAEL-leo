@@ -10,9 +10,7 @@ function ListarProdutos($connection)
 
     $result = $query->fetchAll();
 
-    $htmlSelect = "";
-
-    $htmlOptions = '';
+    $html = '';
     foreach ($result as $index) {
         $id = $index['id_product'];
         $name = $index['product_name'];
@@ -20,8 +18,15 @@ function ListarProdutos($connection)
         $quant = $index['product_quantity'];
         $unit = $index['product_measurement_unit'];
 
-        $htmlOptions .= "<option value='$id'>$name - $brand - $quant $unit</option>";
+        $html .= "<tr id='$id'>
+            <td>$id</td>
+            <td>$name</td>
+            <td>$brand</td>
+            <td>$quant</td>
+            <td>$unit</td>
+            <td class='icones'><ion-icon class='delete' name='close' onclick=DeleteProduto($id)></ion-icon></td>
+        </tr>";
     }
 
-    return $htmlSelect . $htmlOptions . "</select>";
+    return $html;
 }
